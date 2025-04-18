@@ -15,6 +15,17 @@ const names = [
   'Jessica',
   'Marc'
 ];
-function nameFinder(nameList) {
-  // Completar
+
+function nameFinder(nameList, nameToFind) {
+  const index = nameList.indexOf(nameToFind);
+
+  if (index !== -1) {
+    return { found: true, position: index };
+  } else {
+    return false;
+  }
 }
+
+// Ejemplos de uso:
+console.log(nameFinder(names, 'Tony'));     // { found: true, position: 2 }
+console.log(nameFinder(names, 'Wanda'));
