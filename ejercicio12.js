@@ -3,7 +3,6 @@ Valores únicos: Crea una función que reciba por parámetro un array y comprueb
 Pista: puedes generar un nuevo array y devolverlo.
 
 Puedes usar este array para probar tu función:
-
 const duplicates = [
   'sushi',
   'pizza',
@@ -17,6 +16,18 @@ const duplicates = [
   'pasta',
   'soda'
 ];
+
 function removeDuplicates(list) {
-  // Completar
+  const unique = [];
+
+  for (let item of list) {
+    if (!unique.includes(item)) {
+      unique.push(item);
+    }
+  }
+
+  return unique;
 }
+
+console.log(removeDuplicates(duplicates)); 
+
