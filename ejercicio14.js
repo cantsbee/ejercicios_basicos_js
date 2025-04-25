@@ -19,6 +19,19 @@ const words = [
   'sleep',
   'code'
 ];
+
 function repeatCounter(list) {
-  // Completar
+  const counter = {};
+
+  for (const word of list) {
+    if (counter[word]) {
+      counter[word]++;
+    } else {
+      counter[word] = 1;
+    }
+  }
+
+  return counter;
 }
+
+console.log(repeatCounter(words));
