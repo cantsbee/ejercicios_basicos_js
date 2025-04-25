@@ -17,12 +17,12 @@ const foodSchedule = [
   { name: "Pasta", isVegan: true },
 ];
 
-let fruitIndex = 0; // Índice para recorrer el array de frutas
+let fruitIndex = 0;
 for (let i = 0; i < foodSchedule.length; i++) {
   if (!foodSchedule[i].isVegan) {
-    foodSchedule[i].name = fruits[fruitIndex]; // Reemplazar por una fruta
+    foodSchedule[i].name = fruits[fruitIndex]; // reemplazar por una fruta
     fruitIndex++;
-    if (fruitIndex >= fruits.length) { // Asegurarse de no usar más frutas de las que hay
+    if (fruitIndex >= fruits.length) { 
       break;
     }
   }
